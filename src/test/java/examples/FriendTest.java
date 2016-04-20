@@ -4,6 +4,7 @@ import org.junit.After;
 import org.junit.Before;
 import org.junit.Test;
 
+import java.awt.*;
 import java.awt.geom.Point2D;
 
 import static org.junit.Assert.*;
@@ -22,10 +23,10 @@ public class FriendTest {
 
     }
 
-    @Test
+    /*@Test
     public void testUpdate() throws Exception {
-
-    }
+        //update only does a string.  Trivial,in this case.
+    }*/
 
     @Test
     public void testGetCollisionKey() throws Exception {
@@ -33,10 +34,10 @@ public class FriendTest {
         assertEquals(myfriend.getCollisionKey(), "Friend");
     }
 
-    @Test
+    /*@Test
     public void testUpdate1() throws Exception {
-
-    }
+        //trivial, only outputs strings.
+    }*/
 
     @Test
     public void testGetLocation() throws Exception {
@@ -84,6 +85,11 @@ public class FriendTest {
 
     @Test
     public void testGetBoundingShape() throws Exception {
+        myfriend = new Friend();//default friends and gameobjects(super) are rectangles.
+        assert(myfriend.getBoundingShape() instanceof Rectangle);
+
+
+
 
     }
 }
