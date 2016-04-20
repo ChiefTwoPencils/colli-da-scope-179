@@ -10,9 +10,7 @@ import java.awt.geom.Point2D;
 
 import static org.junit.Assert.*;
 
-/**
- * Created by Austin on 4/20/2016.
- */
+
 public class FriendTest {
     private Friend myfriend;
     @Before
