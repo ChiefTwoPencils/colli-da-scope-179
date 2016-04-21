@@ -5,11 +5,14 @@ import collidascope.ICollider;
 import examples.Enemy;
 import examples.Friend;
 import org.junit.After;
+import org.junit.Assert;
 import org.junit.Before;
 import org.junit.Test;
 
 import java.awt.geom.Point2D;
+import java.util.ArrayList;
 import java.util.HashMap;
+import java.util.List;
 import java.util.Map;
 import java.util.function.BiFunction;
 
@@ -17,6 +20,7 @@ import static org.junit.Assert.*;
 
 public class DetectorTest {
     private Detector mydetect;
+    private Map<String, BiFunction<ICollider, ICollider, Boolean>> detectors;
     private Friend tempf;
     private Enemy tempe;
     private String tempkey;
@@ -32,12 +36,21 @@ public class DetectorTest {
 
     @Test
     public void testAddDetectors() throws Exception {
-
+        detectors = new HashMap<>();
+        mydetect.addDetectors(detectors);
+        tempf = new Friend();
+        tempe = new Enemy();
+        assertEquals(mydetect.detectCollision(tempf, tempe, ""), false);
     }
 
     @Test
     public void testAddDetectors1() throws Exception {
-
+        List<String> keys = new ArrayList<String>();
+        List<BiFunction<ICollider, ICollider, Boolean>> detectors = new ArrayList<BiFunction<ICollider, ICollider, Boolean>>();
+        mydetect.addDetectors(keys, detectors);
+        tempf = new Friend();
+        tempe = new Enemy();
+        assertEquals(mydetect.detectCollision(tempf, tempe, ""), false);
     }
 
     @Test
