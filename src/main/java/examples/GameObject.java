@@ -65,7 +65,7 @@ implements ICollider {
     public GameObject(Point2D.Double location, int size) {
         boundingShape = new Rectangle((int) location.getX(), (int) location.getY(), size, size);
         this.location = location;
-        SIZE = size;
+        SIZE = 50;
         detectors = new HashMap<>();
         handlers = new HashMap<>();
     }

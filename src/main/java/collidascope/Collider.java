@@ -158,6 +158,6 @@ public class Collider {
      * @return The concatenation of the second key to the first.
      */
     public static String getCollisionString(ICollider a, ICollider b) {
-        return a.getCollisionKey() + b.getCollisionKey();
+        return b.getCollisionKey() + a.getCollisionKey();
     }
 }

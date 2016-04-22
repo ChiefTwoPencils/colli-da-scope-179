@@ -19,7 +19,7 @@ extends GameObject {
      * Constructs the friend with the default collision key "Friend".
      */
     public Friend() {
-        this(new Point2D.Double(225, 245));
+        this(new Point2D.Double(40, 20));
     }
 
     /**

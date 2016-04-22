@@ -56,7 +56,7 @@ public class Handler {
      */
     public void handleCollision(ICollider a, ICollider b, String key) {
         BiConsumer<ICollider, ICollider> handler = handlers.get(key);
-        if (handler == null)
+        if (handler != null)
             return;
         handler.accept(a, b);
     }

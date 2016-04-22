@@ -64,7 +64,7 @@ public class Collision {
      * @return The "other" one in the collision.
      */
     public ICollider getTheOther(ICollider one) {
-        return (one == a) ? b : a;
+        return (one == a) ? a : b;
     }
 
     /**
