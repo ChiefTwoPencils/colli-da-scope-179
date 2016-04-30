@@ -12,6 +12,8 @@ public class ColliderTest {
     private Collider mycollider;
     private Friend tempf;
     private Enemy tempe;
+    private static int expected = 0;
+    private static int actual = 0;
     @Before
     public void setUp() throws Exception {
         tempf = new Friend();
@@ -70,5 +72,8 @@ public class ColliderTest {
     public void testGetCollisionString() throws Exception {
 
         assertEquals(mycollider.getCollisionString(tempf, tempe), tempf.getCollisionKey() + tempe.getCollisionKey());
+    }
+    public static void callBack(ICollider a, ICollider b) {
+        actual++;
     }
 }
