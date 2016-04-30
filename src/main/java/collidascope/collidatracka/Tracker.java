@@ -40,7 +40,8 @@ implements Iterable {
         // Assigns the tree set and passes in an anonymous comparator for
         // prioritization.
         collisions = new TreeSet<>((Collision one, Collision theOther) ->
-                 one.getPriority()-theOther.getPriority());
+          theOther.getPriority() - one.getPriority()
+        );
     }
 
     /**
@@ -59,7 +60,7 @@ implements Iterable {
     }
 
     @Override
-    public Iterator<Collision> iterator() {
+    public Iterator iterator() {
         return collisions.iterator();
     }
 

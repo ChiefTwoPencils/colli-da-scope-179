@@ -64,7 +64,7 @@ public class Collision {
      * @return The "other" one in the collision.
      */
     public ICollider getTheOther(ICollider one) {
-        return (one == b) ? a : b;
+        return (one == a) ? b : a;
     }
 
     /**
@@ -73,6 +73,6 @@ public class Collision {
      * @return The collision key.
      */
     public String getCollisionKey() {
-        return Collider.getCollisionString(a,b);
+        return Collider.getCollisionString(a, b);
     }
 }
