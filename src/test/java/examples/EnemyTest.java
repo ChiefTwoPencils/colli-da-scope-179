@@ -14,6 +14,6 @@ public class EnemyTest {
     @Test
     public void getCollisionKey() throws Exception {
         myEnemy = new Enemy();//constructor doesn't matter, is always "Enemy".
-        assertEquals(myEnemy.getCollisionKey(), "Friend");
+        assertEquals(myEnemy.getCollisionKey(), "Enemy");
     }
 }
